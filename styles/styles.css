@@ -88,7 +88,6 @@ input[type=number] {
 
 
 /* buttons */
-
 .button {
 	display: inline-flex;
 	align-items: center;
@@ -145,6 +144,38 @@ input[type=number] {
 .blue-btn:active,
 .green-btn:active {
 	color: rgba(255, 255, 255, 0.3);
+}
+
+
+/* heading */
+.heading-h2 h2 {
+	font-size: 30px;
+	line-height: 36px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: inherit;
+}
+
+.heading-h2 p {
+	margin: 0;
+	font-size: 22px;
+	line-height: 26px;
+	color: #333;
+}
+
+.heading-h3 h3 {
+	font-size: 24px;
+	line-height: 28px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: inherit;
+}
+
+.heading-h3 p {
+	margin: 0;
+	font-size: 18px;
+	line-height: 21px;
+	color: #333;
 }
 
 
@@ -271,6 +302,7 @@ input[type=number] {
 
 /* benefits */
 .benefits-head {
+	margin: 0 0 21px;
 	padding: 69px 0;
 	text-align: center;
 }
@@ -278,15 +310,6 @@ input[type=number] {
 .benefits-head h2 {
 	max-width: 620px;
 	margin: 0 auto 25px auto;
-	font-size: 30px;
-	line-height: 36px;
-	text-transform: uppercase;
-}
-
-.benefits-head p {
-	margin: 0;
-	font-size: 22px;
-	line-height: 26px;
 }
 
 .benefits-list {
@@ -314,7 +337,8 @@ input[type=number] {
 	background-color: rgba(131, 179, 211, 0.2);
 }
 
-.benefit-wide {
+.benefit-wide,
+.benefit-wide p {
 	color: #fff;
 	background-color: #82b3d3;
 }
@@ -327,11 +351,7 @@ input[type=number] {
 }
 
 .benefit-content h3 {
-	margin: 0;
 	position: relative;
-	font-size: 24px;
-	line-height: 28px;
-	text-transform: uppercase;
 }
 
 .benefit-content h3::after {
@@ -347,12 +367,6 @@ input[type=number] {
 	background-color: rgba(255, 255, 255, 0.3);
 }
 
-.benefit-content p {
-	margin: 0;
-	font-size: 18px;
-	line-height: 21px;
-}
-
 
 /* services */
 .services-head {
@@ -364,15 +378,6 @@ input[type=number] {
 
 .services-head h2 {
 	margin: 0 0 20px;
-	font-size: 30px;
-	line-height: 36px;
-	text-transform: uppercase;
-}
-
-.services-head p {
-	margin: 0;
-	font-size: 22px;
-	line-height: 26px;
 }
 
 .services-list {
@@ -396,14 +401,6 @@ input[type=number] {
 	justify-self: center;
 	align-self: center;
 	text-align: center;
-}
-
-.service-content h3 {
-	margin: 30px 0;
-	position: relative;
-	font-size: 24px;
-	line-height: 28px;
-	text-transform: uppercase;
 }
 
 .service-content::before {
@@ -432,12 +429,6 @@ input[type=number] {
 	background-size: contain;
 }
 
-.service-content p {
-	margin: 0;
-	font-size: 18px;
-	line-height: 21px;
-}
-
 
 /* hotel search */
 .hotel-search {
@@ -449,14 +440,10 @@ input[type=number] {
 
 .hotel-search h2 {
 	margin: 0 0 20px;
-	font-size: 30px;
-	line-height: 36px;
-	text-transform: uppercase;
 }
 
 .hotel-search p {
-	font-size: 22px;
-	line-height: 26px;
+	margin: 0 0 54px;
 }
 
 .hotel-search .modal-btn {
@@ -477,7 +464,8 @@ input[type=number] {
 	background-size: cover;
 }
 
-.subscribe-section.subscribe-bg {
+.subscribe-section.subscribe-bg,
+.subscribe-section.subscribe-bg p {
 	color: #fff;
 }
 
@@ -489,15 +477,10 @@ input[type=number] {
 
 .subscribe h2 {
 	margin: 0 0 20px;
-	font-size: 30px;
-	line-height: 36px;
-	text-transform: uppercase;
 }
 
 .subscribe p {
 	margin: 0 0 54px;
-	font-size: 22px;
-	line-height: 26px;
 }
 
 .subscribe-form {
