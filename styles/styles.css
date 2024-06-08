@@ -556,6 +556,13 @@ input[type=number] {
 	line-height: 21px;
 }
 
+.breadcrumb-link:hover,
+.breadcrumb-page:hover,
+.breadcrumb-link:active,
+.breadcrumb-page:active {
+	opacity: 0.6;
+}
+
 
 /* filter */
 .filter {
