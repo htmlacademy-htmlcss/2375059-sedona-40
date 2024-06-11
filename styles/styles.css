@@ -625,12 +625,16 @@ input[type=number] {
 }
 
 .filter-option-label {
+	position: relative;
+	display: flex;
+	align-items: center;
   font-size: 18px;
   line-height: 23px;
   cursor: pointer;
 }
 
-.filter-option-btn {
+.filter-option-label::before {
+	content: '';
   position: relative;
   display: block;
   width: 20px;
@@ -645,14 +649,14 @@ input[type=number] {
   display: none;
 }
 
-.filter-option-input[type="radio"] + .filter-option-content .filter-option-btn {
+.filter-option-input[type="radio"] + .filter-option-content .filter-option-label::before {
   border-radius: 100%;
 }
 
-.filter-option-input[type="checkbox"]:checked + .filter-option-content .filter-option-btn::before {
+.filter-option-input[type="checkbox"]:checked + .filter-option-content .filter-option-label::after {
   content: '';
   position: absolute;
-  top: 5px;
+  top: initial;
   left: 4px;
   display: block;
   width: 12px;
@@ -662,10 +666,10 @@ input[type=number] {
   background-size: contain;
 }
 
-.filter-option-input[type="radio"]:checked + .filter-option-content .filter-option-btn::before {
+.filter-option-input[type="radio"]:checked + .filter-option-content .filter-option-label::after {
   content: '';
   position: absolute;
-  top: 5px;
+  top: initial;
   left: 5px;
   display: block;
   width: 10px;
