@@ -861,7 +861,6 @@ input[type=number] {
 .catalog-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  grid-auto-rows: 438px;
   gap: 20px;
   margin: 0 0 40px;
   padding: 0 0 40px;
@@ -874,7 +873,12 @@ input[type=number] {
 }
 
 .card-preview {
+	height: 100%;
   padding: 20px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 16px;
+	box-sizing: border-box;
 }
 
 .card-photo {
@@ -882,14 +886,13 @@ input[type=number] {
 }
 
 .card-title {
-  margin: 0 0 16px;
+  margin: 0;
 }
 
 .card-price-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 16px;
 }
 
 .card-price-row span {
@@ -903,6 +906,7 @@ input[type=number] {
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   grid-auto-rows: 36px;
   gap: 16px 20px;
+	margin-top: auto;
 }
 
 .more-btn {
