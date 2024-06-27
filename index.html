@@ -19,7 +19,7 @@
   <body class="page">
     <div class="page-wrap">
       <header class="page-header" data-test="header">
-        <nav class="header-nav">
+        <nav class="header-nav flex-row">
           <div class="header-logo">
             <a class="logo" href="index.html">
               <img src="images/logo.svg" width="140" height="70" alt="Логотип сайта Седона">
@@ -70,13 +70,13 @@
           </div>
         </section>
         <section class="benefits-section" data-test="advantages">
-          <div class="benefits-head">
+          <div class="benefits-head text-center">
             <h2 class="heading-2">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
             <p class="subheading-2">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
           </div>
-          <ul class="list benefits-list">
+          <ul class="list benefits-list flex-row">
             <li class="benefit-item benefit-wide">
-              <div class="benefit-content">
+              <div class="benefit-content text-center">
                 <h3 class="heading-3">Настоящий городок</h3>
                 <p class="subheading-3">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
@@ -85,25 +85,25 @@
               </div>
             </li>
             <li class="benefit-item">
-              <div class="benefit-content">
+              <div class="benefit-content text-center">
                 <h3 class="heading-3">Небольшая площадь</h3>
                 <p class="subheading-3">Все достопримечательности находятся очень близко</p>
               </div>
             </li>
             <li class="benefit-item">
-              <div class="benefit-content">
+              <div class="benefit-content text-center">
                 <h3 class="heading-3">Красивая дорога</h3>
                 <p class="subheading-3">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
               </div>
             </li>
             <li class="benefit-item">
-              <div class="benefit-content">
+              <div class="benefit-content text-center">
                 <h3 class="heading-3">Мало туристов</h3>
                 <p class="subheading-3">Большинство едет в Гранд Каньон и толпится там</p>
               </div>
             </li>
             <li class="benefit-item benefit-wide">
-              <div class="benefit-content">
+              <div class="benefit-content text-center">
                 <h3 class="heading-3">Там есть мост дьявола</h3>
                 <p class="subheading-3">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </div>
@@ -114,25 +114,25 @@
           </ul>
         </section>
         <section class="services-section">
-          <div class="services-head">
+          <div class="services-head text-center">
             <h2 class="heading-2">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
             <p class="subheading-2">Опытный персонал и качественное обслуживание!</p>
           </div>
-          <ul class="list services-list">
-            <li class="service-item housing">
-              <div class="service-content">
+          <ul class="list services-list flex-row">
+            <li class="service-item item-housing">
+              <div class="service-content text-center">
                 <h3 class="heading-3">Жильё</h3>
                 <p class="subheading-3">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
               </div>
             </li>
-            <li class="service-item food">
-              <div class="service-content">
+            <li class="service-item item-food">
+              <div class="service-content text-center">
                 <h3 class="heading-3">Еда</h3>
                 <p class="subheading-3">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
               </div>
             </li>
-            <li class="service-item souvenirs">
-              <div class="service-content">
+            <li class="service-item item-souvenirs">
+              <div class="service-content text-center">
                 <h3 class="heading-3">Сувениры</h3>
                 <p class="subheading-3">Не только китайского, но и настоящего местного производства!</p>
               </div>
@@ -140,15 +140,15 @@
           </ul>
         </section>
         <section class="hotel-search-section" data-test="search">
-          <div class="hotel-search">
+          <div class="hotel-search text-center">
             <h2 class="heading-2">Заинтересовались?</h2>
             <p class="subheading-2">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц
               в Седоне</p>
-            <button class="button modal-btn brown-btn" type="button">Поиск гостиницы в Седоне</button>
+            <button class="button modal-btn bflex-rown-btn" type="button">Поиск гостиницы в Седоне</button>
           </div>
         </section>
         <section class="subscribe-section subscribe-bg" data-test="subscribe">
-          <div class="subscribe">
+          <div class="subscribe text-center">
             <h2 class="heading-2">Подпишитесь на рассылку</h2>
             <p class="subheading-2">Только полезная информация и никакого спама, честное бойскаутское!</p>
             <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -158,7 +158,7 @@
           </div>
         </section>
       </main>
-      <footer class="page-footer" data-test="footer">
+      <footer class="page-footer flex-row" data-test="footer">
         <div class="footer-socials">
           <ul class="list social-list">
             <li class="social-item item-vk">
@@ -202,10 +202,10 @@
             </li>
           </ul>
         </div>
-        <div class="footer-contacts">
+        <div class="footer-contacts text-center">
           <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
         </div>
-        <div class="footer-copyright">
+        <div class="footer-copyright text-right">
           <a class="copyright" href="https://htmlacademy.ru/" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" width="115" height="34" viewBox="0 0 115 34" fill="currentColor">
               <path d="M0 13.2564V15.8564H2.5V13.2564H0Z" fill="currentColor" />
