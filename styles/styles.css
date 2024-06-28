@@ -211,11 +211,13 @@ input[type=number] {
 }
 
 .header-menu {
+  width: 500px;
   margin-right: auto;
 }
 
 .menu-list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -357,7 +359,7 @@ input[type=number] {
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  padding: 0 85px;
+  padding: 65px 85px;
 }
 
 .benefit-img {
@@ -411,7 +413,7 @@ input[type=number] {
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  padding: 0 85px;
+  padding: 65px 85px;
 }
 
 .service-content::before {
@@ -873,12 +875,12 @@ input[type=number] {
 }
 
 .card-preview {
-	height: 100%;
+  height: 100%;
   padding: 20px;
-	display: flex;
-	flex-direction: column;
-	row-gap: 16px;
-	box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  box-sizing: border-box;
 }
 
 .card-photo {
@@ -906,7 +908,7 @@ input[type=number] {
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   grid-auto-rows: 36px;
   gap: 16px 20px;
-	margin-top: auto;
+  margin-top: auto;
 }
 
 .more-btn {
@@ -977,12 +979,12 @@ input[type=number] {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  gap: 8px;
 }
 
 .pagination-item .button {
   width: 60px;
   height: 60px;
-  margin: 0 8px 0 0;
   font-size: 20px;
   line-height: 36px;
 }
