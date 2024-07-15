@@ -235,6 +235,10 @@ input[type=number] {
   color: #000;
 }
 
+.menu-item.active {
+  pointer-events: none;
+}
+
 .menu-item.active .menu-link::after {
   content: '';
   position: absolute;
@@ -686,6 +690,11 @@ input[type=number] {
   border-radius: 100%;
 }
 
+.filter-option-input[type="checkbox"]:focus + .filter-option-content .filter-option-label::before,
+.filter-option-input[type="radio"]:focus + .filter-option-content .filter-option-label::before {
+  box-shadow: 0 0 0 2px rgba(131, 179, 211, 1);
+}
+
 .filter-group-row {
   display: flex;
   flex-wrap: wrap;
@@ -695,7 +704,7 @@ input[type=number] {
 .price-input-container {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 36px;
+  margin-bottom: 44px;
 }
 
 .price-field {
@@ -738,14 +747,6 @@ input[type=number] {
   border-radius: 0 4px 4px 0;
 }
 
-.range-input {
-  width: 100%;
-  height: 20px;
-  background-image: url(../images/ranger.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
 .filter-controls {
   display: flex;
   flex-direction: column;
@@ -779,6 +780,45 @@ input[type=number] {
 .catalog-list-section {
   padding: 50px 70px 60px 70px;
 }
+
+
+/* ranger */
+
+.filter-range-slider {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.active-range-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 226px;
+  height: 4px;
+  background-color: #fff;
+}
+
+.range-btn {
+  position: absolute;
+  bottom: -8px;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.min-range-btn {
+  left: 0;
+}
+
+.max-range-btn {
+  left: 207px;
+}
+
 
 
 /* catalog tools */
@@ -1006,6 +1046,11 @@ input[type=number] {
 .pagination-item:first-child .pagination-link {
   color: #000;
   background-color: #f2f2f2;
+}
+
+.pagination-current,
+.space-item {
+  pointer-events: none;
 }
 
 

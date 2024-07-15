@@ -147,20 +147,27 @@
                     <div class="price-input-container">
                       <div class="price-input">
                         <div class="price-field">
-                          <input class="price-field-input min-input" type="number" value="0">
+                          <input class="price-field-input min-input" name="min-input" type="number" value="0">
                           <span class="price-field-label min-input-label">от</span>
                         </div>
                       </div>
                       <div class="price-input">
                         <div class="price-field">
-                          <input class="price-field-input max-input" type="number" value="9000">
+                          <input class="price-field-input max-input" name="max-input" type="number" value="9000">
                           <span class="price-field-label max-input-label">до</span>
                         </div>
                       </div>
                     </div>
                     <div class="range-input">
-                      <span class="min-range visually-hidden"></span>
-                      <span class="max-range visually-hidden"></span>
+                      <div class="filter-range-slider">
+                        <div class="active-range-bar"></div>
+                        <button class="range-btn min-range-btn" type="button">
+                          <span class="visually-hidden">Минимальная цена</span>
+                        </button>
+                        <button class="range-btn max-range-btn" type="button">
+                          <span class="visually-hidden">Максимальная цена</span>
+                        </button>
+                      </div>
                     </div>
                   </div>
                   <div class="filter-controls">
