@@ -29,6 +29,8 @@
   --bg-button-select-focus: #6c9e42;
   --color-button-select-active: rgba(255, 255, 255, 0.3);
 
+  --color-icons-second: #83B3D3;
+
   --bg-button-disabled: #e5e5e5;
 
   --color-button-small: #fff;
@@ -95,12 +97,8 @@ textarea:focus {
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+  appearance: none;
   margin: 0;
-}
-
-input[type=number] {
-  -moz-appearance: textfield;
 }
 
 .list {
@@ -141,7 +139,6 @@ input[type=number] {
 
 
 /* heading */
-
 .heading-1 {
   font-size: 60px;
   line-height: 78px;
@@ -324,7 +321,6 @@ input[type=number] {
 
 
 /* benefits */
-
 .benefits-head {
   margin: 0 0 21px;
   padding: 69px 0;
@@ -390,7 +386,6 @@ input[type=number] {
 
 
 /* services */
-
 .services-head {
   max-width: 505px;
   margin: 0 auto;
@@ -723,7 +718,7 @@ input[type=number] {
 
 .price-field-input:focus {
   outline-style: solid;
-  outline-color: #83b3d3;
+  outline-color: var(--color-icons-second);
 }
 
 .min-input {
@@ -817,7 +812,6 @@ input[type=number] {
 .max-range-btn {
   left: 207px;
 }
-
 
 
 /* catalog tools */
@@ -1079,7 +1073,7 @@ input[type=number] {
 
 .social-icon svg {
   display: block;
-  color: #83b3d3;
+  color: var(--color-icons-second);
 }
 
 .social-icon svg:hover,
@@ -1361,7 +1355,7 @@ input[type=number] {
   text-align: center;
   text-transform: lowercase;
   color: #fff;
-  background-color: #83B3D3;
+  background-color: var(--color-icons-second);
   border-radius: 100%;
   cursor: pointer;
 }
