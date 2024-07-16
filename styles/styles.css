@@ -783,7 +783,6 @@ input[type=number] {
 
 
 /* ranger */
-
 .filter-range-slider {
   position: relative;
   width: 100%;
@@ -1123,4 +1122,296 @@ input[type=number] {
 
 .copyright svg:active {
   color: rgba(117, 97, 87, 0.3);
+}
+
+
+/* popup */
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(242, 242, 242, 0.8);
+
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  width: 577px;
+  position: relative;
+  margin: 396px auto;
+  padding: 64px 70px;
+  background-color: #fff;
+  border-radius: 30px;
+}
+
+.popup h2 {
+  margin: 0 0 64px;
+}
+
+.popup .close {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  top: 64px;
+  right: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F2F2F2;
+  border-radius: 100%;
+}
+
+.popup .close:hover {
+  background-color: #E6E6E6;
+}
+
+.popup .close:focus {
+  box-shadow: 0 0 0 3px rgba(131, 179, 211, 1);
+}
+
+.popup .close:active img {
+  opacity: 0.3;
+}
+
+.popup .content {
+  overflow: auto;
+  background-color: red;
+}
+
+
+/* booking */
+.booking-list {
+  display: grid;
+  grid-template-areas:
+    "arrival arrival"
+    "departure departure"
+    "adults children"
+    "submit submit";
+  gap: 48px 88px;
+}
+
+.arrival {
+  grid-area: arrival;
+}
+
+.departure {
+  grid-area: departure;
+}
+
+.adults {
+  width: 247px;
+  grid-area: adults;
+}
+
+.children {
+  width: 242px;
+  grid-area: children;
+}
+
+.submit-item {
+  grid-area: submit;
+}
+
+.booking-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.booking-item .form-label {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.input-wrap {
+  position: relative;
+  width: 440px;
+}
+
+.input-wrap::before {
+  content: '';
+  position: absolute;
+  top: 14px;
+  right: 20px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url(../icons/calendar.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.3;
+}
+
+.arrival .input-wrap::after {
+  content: 'Мы не можем отправить вас в прошлое.';
+  position: absolute;
+  display: block;
+  padding: 0 20px;
+  font-size: 16px;
+  line-height: 21px;
+  color: #FF5757;
+}
+
+.departure .input-wrap::after {
+  content: 'На эти даты есть свободные номера. Пока есть.';
+  position: absolute;
+  display: block;
+  padding: 0 20px;
+  font-size: 16px;
+  line-height: 21px;
+  color: #333333;
+}
+
+.arrival input,
+.departure input {
+  width: 100%;
+  height: 48px;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: #F2F2F2;
+  border-radius: 4px;
+  padding: 0 20px 0 20px;
+  box-sizing: border-box;
+}
+
+.arrival input::placeholder,
+.departure input::placeholder {
+  color: #000;
+}
+
+.arrival input:focus,
+.departure input:focus {
+  box-shadow: 0 0 0 3px rgba(131, 179, 211, 1);
+}
+
+.counter {
+  width: 110px;
+  height: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.counter-btn {
+  width: 40px;
+  height: 48px;
+  border: 0;
+  font-size: 26px;
+  background-color: #F2F2F2;
+  cursor: pointer;
+}
+
+.counter-minus {
+  border-radius: 4px 0 0 4px;
+}
+
+.counter-plus {
+  border-radius: 0 4px 4px 0;
+}
+
+.counter-btn span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  color: rgba(117, 97, 87, 0.3);
+  border: 3px solid transparent;
+  border-radius: 4px;
+}
+
+.counter-btn:hover span {
+  color: #000;
+}
+
+.counter-btn:focus span {
+  border-color: #82B3D3;
+}
+
+.counter-btn:active span {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.counter-input {
+  width: 30px;
+  height: 48px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  background-color: #F2F2F2;
+}
+
+.info {
+  position: relative;
+  display: inline-block;
+  margin: 0 0 0 10px;
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: lowercase;
+  color: #fff;
+  background-color: #83B3D3;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.info-text {
+  position: absolute;
+  top: 40px;
+  left: -110px;
+  width: 216px;
+  padding: 15px 18px 18px 22px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: left;
+  text-transform: initial;
+  background-color: #333333;
+  border-radius: 15px;
+  visibility: hidden;
+}
+
+.info:hover .info-text {
+  visibility: visible;
+}
+
+.info-text::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -15px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #333 transparent;
+}
+
+.booking-submit {
+  width: 100%;
+  height: 60px;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--color-button-small);
+  background-color: var(--bg-button-second);
+  border-radius: 10px;
+}
+
+.booking-submit:hover,
+.booking-submit:focus {
+  background-color: var(--bg-button-second-hover);
+}
+
+.booking-submit:active {
+  color: var(--color-button-second-active);
 }

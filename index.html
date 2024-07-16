@@ -144,7 +144,7 @@
             <h2 class="heading-2">Заинтересовались?</h2>
             <p class="subheading-2">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц
               в Седоне</p>
-            <button class="button modal-btn bflex-rown-btn" type="button">Поиск гостиницы в Седоне</button>
+            <a class="button modal-btn bflex-rown-btn" href="#popup">Поиск гостиницы в Седоне</a>
           </div>
         </section>
         <section class="subscribe-section subscribe-bg" data-test="subscribe">
@@ -153,7 +153,7 @@
             <p class="subheading-2">Только полезная информация и никакого спама, честное бойскаутское!</p>
             <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
               <input class="input-field" placeholder="Ваш e-mail" type="email" name="subscribe-email" required>
-              <button class="button subscribe-button blue-btn" type="submit">Подписаться</button>
+              <button class="button subscribe-button" type="submit">Подписаться</button>
             </form>
           </div>
         </section>
@@ -248,6 +248,56 @@
         </div>
       </footer>
     </div>
+
+    <div id="popup" class="overlay">
+      <div class="popup">
+        <h2 class="popup-title heading-2">Поиск гостиницы в Седоне</h2>
+        <a class="close" href="#"><img src="icons/cross.svg" width="20" height="20" alt="Закрыть модальное окно"></a>
+        <div class="popup-content">
+          <form class="booking-form" action="https://echo.htmlacademy.ru/" method="post">
+            <ul class="list booking-list">
+              <li class="arrival booking-item">
+                <label class="form-label" for="arrival">Дата заезда:</label>
+                <div class="input-wrap">
+                  <input type="text" id="arrival" name="arrival" placeholder="27 апреля 2020">
+                </div>
+              </li>
+              <li class="departure booking-item">
+                <label class="form-label" for="departure">Дата выезда:</label>
+                <div class="input-wrap">
+                  <input type="text" id="departure" name="departure" placeholder="1 сентября 2023">
+                </div>
+              </li>
+              <li class="adults booking-item">
+                <label class="form-label" for="adults">Взрослые:</label>
+                <div class="counter">
+                  <button class="counter-btn counter-minus" type="button"><span>-</span></button>
+                  <input class="counter-input" type="number" id="adults" name="adults" value="2" min="0">
+                  <button class="counter-btn counter-plus" type="button"><span>+</span></button>
+                </div>
+              </li>
+              <li class="children booking-item">
+                <label class="form-label" for="children">Дети:
+                  <span class="info">i
+                    <span class="info-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18
+                      лет. Дети до 6 лет размещаются бесплатно.</span>
+                  </span>
+                </label>
+                <div class="counter">
+                  <button class="counter-btn counter-minus" type="button"><span>-</span></button>
+                  <input class="counter-input" type="number" id="children" name="children" value="2" min="0">
+                  <button class="counter-btn counter-plus" type="button"><span>+</span></button>
+                </div>
+              </li>
+              <li class="submit-item booking-item">
+                <button class="button booking-submit" type="submit">Найти</button>
+              </li>
+            </ul>
+          </form>
+        </div>
+      </div>
+    </div>
+
   </body>
 
 </html>
