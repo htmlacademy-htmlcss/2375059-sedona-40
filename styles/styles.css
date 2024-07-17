@@ -30,6 +30,8 @@
   --color-button-select-active: rgba(255, 255, 255, 0.3);
 
   --color-icons-second: #83B3D3;
+	
+	--border-shadow-3: 0 0 0 3px rgba(131, 179, 211, 1);
 
   --bg-button-disabled: #e5e5e5;
 
@@ -580,9 +582,7 @@ input::-webkit-inner-spin-button {
 }
 
 .breadcrumb-link:hover,
-.breadcrumb-page:hover,
-.breadcrumb-link:active,
-.breadcrumb-page:active {
+.breadcrumb-link:active {
   opacity: 0.6;
 }
 
@@ -653,7 +653,14 @@ input::-webkit-inner-spin-button {
 }
 
 .filter-option-input {
-  display: none;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
 }
 
 .filter-option-input[type="radio"] + .filter-option-content .filter-option-label::before {
@@ -687,7 +694,7 @@ input::-webkit-inner-spin-button {
 
 .filter-option-input[type="checkbox"]:focus + .filter-option-content .filter-option-label::before,
 .filter-option-input[type="radio"]:focus + .filter-option-content .filter-option-label::before {
-  box-shadow: 0 0 0 2px rgba(131, 179, 211, 1);
+  box-shadow: var(--border-shadow-3);
 }
 
 .filter-group-row {
@@ -700,6 +707,7 @@ input::-webkit-inner-spin-button {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 44px;
+	gap: 2px;
 }
 
 .price-field {
@@ -710,19 +718,19 @@ input::-webkit-inner-spin-button {
   width: 123px;
   height: 48px;
   padding-left: 20px;
-  background-color: #fff;
+  background-color: #f2f2f2;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
 }
 
+.price-field-input:hover {
+  background-color: #e6e6e6;
+}
+
 .price-field-input:focus {
   outline-style: solid;
   outline-color: var(--color-icons-second);
-}
-
-.min-input {
-  margin-right: 2px;
 }
 
 .price-field-label {
@@ -805,6 +813,18 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
 }
 
+.range-btn:hover {
+	box-shadow: rgba(0, 0, 0, 0.25);
+}
+
+.range-btn:focus {
+  box-shadow: var(--border-shadow-3);
+}
+
+.range-btn:active {
+  box-shadow: rgba(0, 0, 0, 0.4);
+}
+
 .min-range-btn {
   left: 0;
 }
@@ -858,7 +878,7 @@ input::-webkit-inner-spin-button {
 }
 
 .select-control:hover,
-.select-control:active {
+.select-control:focus {
   border-color: #68a2ca;
 }
 
@@ -1159,16 +1179,16 @@ input::-webkit-inner-spin-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   border-radius: 100%;
 }
 
 .popup .close:hover {
-  background-color: #E6E6E6;
+  background-color: #e6e6e6;
 }
 
 .popup .close:focus {
-  box-shadow: 0 0 0 3px rgba(131, 179, 211, 1);
+  box-shadow: var(--border-shadow-3);
 }
 
 .popup .close:active img {
@@ -1248,17 +1268,17 @@ input::-webkit-inner-spin-button {
 }
 
 .arrival .input-wrap::after {
-  content: 'Мы не можем отправить вас в прошлое.';
+  content: 'мы не можем отправить вас в прошлое.';
   position: absolute;
   display: block;
   padding: 0 20px;
   font-size: 16px;
   line-height: 21px;
-  color: #FF5757;
+  color: #ff5757;
 }
 
 .departure .input-wrap::after {
-  content: 'На эти даты есть свободные номера. Пока есть.';
+  content: 'на эти даты есть свободные номера. пока есть.';
   position: absolute;
   display: block;
   padding: 0 20px;
@@ -1273,10 +1293,15 @@ input::-webkit-inner-spin-button {
   height: 48px;
   font-size: 18px;
   font-weight: 700;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   border-radius: 4px;
   padding: 0 20px 0 20px;
   box-sizing: border-box;
+}
+
+.arrival input:hover,
+.departure input:hover {
+  background-color: #e6e6e6;
 }
 
 .arrival input::placeholder,
@@ -1286,7 +1311,7 @@ input::-webkit-inner-spin-button {
 
 .arrival input:focus,
 .departure input:focus {
-  box-shadow: 0 0 0 3px rgba(131, 179, 211, 1);
+  box-shadow: var(--border-shadow-3);
 }
 
 .counter {
@@ -1304,7 +1329,7 @@ input::-webkit-inner-spin-button {
   width: 40px;
   height: 48px;
   border: 0;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   cursor: pointer;
 }
 
@@ -1318,7 +1343,7 @@ input::-webkit-inner-spin-button {
 
 .counter-btn:focus span {
   border-radius: 4px;
-  box-shadow: 0 0 0 3px rgba(131, 179, 211, 1);
+  box-shadow: var(--border-shadow-3);
 }
 
 .counter-btn svg {
@@ -1347,7 +1372,7 @@ input::-webkit-inner-spin-button {
   font-size: 18px;
   font-weight: 700;
   text-align: center;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 
 .info {
@@ -1374,6 +1399,7 @@ input::-webkit-inner-spin-button {
   line-height: 20px;
   font-weight: 400;
   text-align: left;
+	text-transform: initial;
   background-color: #333333;
   border-radius: 15px;
   visibility: hidden;
