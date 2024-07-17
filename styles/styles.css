@@ -1298,12 +1298,39 @@ input::-webkit-inner-spin-button {
 }
 
 .counter-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 40px;
   height: 48px;
   border: 0;
-  font-size: 26px;
   background-color: #F2F2F2;
   cursor: pointer;
+}
+
+.counter-btn span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+.counter-btn:focus span {
+  border-radius: 4px;
+  box-shadow: 0 0 0 3px rgba(131, 179, 211, 1);
+}
+
+.counter-btn svg {
+  opacity: 0.3;
+}
+
+.counter-btn:hover svg {
+  opacity: 1;
+}
+
+.counter-btn:active svg {
+  opacity: 0.3;
 }
 
 .counter-minus {
@@ -1312,28 +1339,6 @@ input::-webkit-inner-spin-button {
 
 .counter-plus {
   border-radius: 0 4px 4px 0;
-}
-
-.counter-btn span {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
-  color: rgba(117, 97, 87, 0.3);
-  border: 3px solid transparent;
-  border-radius: 4px;
-}
-
-.counter-btn:hover span {
-  color: #000;
-}
-
-.counter-btn:focus span {
-  border-color: #82B3D3;
-}
-
-.counter-btn:active span {
-  color: rgba(117, 97, 87, 0.3);
 }
 
 .counter-input {
@@ -1353,7 +1358,6 @@ input::-webkit-inner-spin-button {
   height: 26px;
   line-height: 26px;
   text-align: center;
-  text-transform: lowercase;
   color: #fff;
   background-color: var(--color-icons-second);
   border-radius: 100%;
@@ -1370,7 +1374,6 @@ input::-webkit-inner-spin-button {
   line-height: 20px;
   font-weight: 400;
   text-align: left;
-  text-transform: initial;
   background-color: #333333;
   border-radius: 15px;
   visibility: hidden;
