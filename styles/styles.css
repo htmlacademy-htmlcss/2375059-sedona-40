@@ -30,8 +30,8 @@
   --color-button-select-active: rgba(255, 255, 255, 0.3);
 
   --color-icons-second: #83B3D3;
-	
-	--border-shadow-3: 0 0 0 3px rgba(131, 179, 211, 1);
+
+  --border-shadow-3: 0 0 0 3px rgba(131, 179, 211, 1);
 
   --bg-button-disabled: #e5e5e5;
 
@@ -653,14 +653,14 @@ input::-webkit-inner-spin-button {
 }
 
 .filter-option-input {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	padding: 0;
-	border: 0;
-	clip: rect(0 0 0 0);
-	overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .filter-option-input[type="radio"] + .filter-option-content .filter-option-label::before {
@@ -707,7 +707,7 @@ input::-webkit-inner-spin-button {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 44px;
-	gap: 2px;
+  gap: 2px;
 }
 
 .price-field {
@@ -814,7 +814,7 @@ input::-webkit-inner-spin-button {
 }
 
 .range-btn:hover {
-	box-shadow: rgba(0, 0, 0, 0.25);
+  box-shadow: rgba(0, 0, 0, 0.25);
 }
 
 .range-btn:focus {
@@ -1377,16 +1377,23 @@ input::-webkit-inner-spin-button {
 
 .info {
   position: relative;
-  display: inline-block;
-  margin: 0 0 0 10px;
+  margin: 0 auto 0 10px;
+}
+
+.info-button {
+  display: block;
   width: 26px;
   height: 26px;
-  line-height: 26px;
-  text-align: center;
-  color: #fff;
+  border: none;
   background-color: var(--color-icons-second);
-  border-radius: 100%;
+  padding: 0;
+  margin: 0;
   cursor: pointer;
+  border-radius: 100%;
+}
+
+.info-button svg {
+  color: #fff;
 }
 
 .info-text {
@@ -1399,14 +1406,16 @@ input::-webkit-inner-spin-button {
   line-height: 20px;
   font-weight: 400;
   text-align: left;
-	text-transform: initial;
+  text-transform: initial;
+  color: #fff;
   background-color: #333333;
   border-radius: 15px;
-  visibility: hidden;
+  display: none;
 }
 
-.info:hover .info-text {
-  visibility: visible;
+.info-button:hover + .info-text,
+.info-button:focus + .info-text {
+  display: block;
 }
 
 .info-text::after {
