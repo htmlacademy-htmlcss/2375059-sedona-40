@@ -40,6 +40,15 @@
   --font-weight-bold: 700;
 }
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
 body {
   margin: 0;
@@ -118,9 +127,14 @@ input::-webkit-inner-spin-button {
 }
 
 .visually-hidden {
-  display: none;
-  visibility: hidden;
-  opacity: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 
@@ -175,6 +189,7 @@ input::-webkit-inner-spin-button {
 
 .subheading-2 {
   margin: 0;
+  padding: 0 35px;
   font-size: 22px;
   line-height: 26px;
   color: #333;
@@ -286,11 +301,15 @@ input::-webkit-inner-spin-button {
 }
 
 .modal-btn {
-  padding: 8px 34px;
+  padding: 8px;
   font-size: 16px;
   line-height: 20px;
   color: var(--color-button-small);
   background-color: var(--bg-button-basic);
+}
+
+.modal-btn-small {
+  width: 160px;
 }
 
 .modal-btn:hover,
@@ -360,7 +379,6 @@ input::-webkit-inner-spin-button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-sizing: border-box;
   padding: 65px 85px;
 }
 
@@ -413,7 +431,6 @@ input::-webkit-inner-spin-button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-sizing: border-box;
   padding: 65px 85px;
 }
 
@@ -463,7 +480,7 @@ input::-webkit-inner-spin-button {
   margin: 0 0 54px;
 }
 
-.hotel-search .modal-btn {
+.modal-btn-big {
   font-size: 20px;
   line-height: 36px;
   padding: 8px 50px;
@@ -515,8 +532,8 @@ input::-webkit-inner-spin-button {
 }
 
 .subscribe-button {
-  height: 52px;
-  padding: 0 50px;
+  width: 232px;
+  padding: 8px 50px;
   font-size: 20px;
   line-height: 36px;
   border-radius: 0 4px 4px 0;
@@ -606,6 +623,19 @@ input::-webkit-inner-spin-button {
   border: 0;
 }
 
+.infrastructure-group,
+.living-group {
+  max-width: 150px;
+}
+
+.price-range-group {
+  max-width: 288px;
+}
+
+.filter-submit-group {
+  max-width: 191px;
+}
+
 .filter-title {
   margin: 0 0 32px;
   padding: 0;
@@ -622,6 +652,13 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+.filter-option {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+  cursor: pointer;
+}
+
 .filter-option:hover {
   opacity: 0.6;
 }
@@ -631,46 +668,33 @@ input::-webkit-inner-spin-button {
   align-items: center;
 }
 
+.filter-option-btn {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 .filter-option-label {
   position: relative;
   display: flex;
   align-items: center;
   font-size: 18px;
   line-height: 23px;
-  cursor: pointer;
 }
 
-.filter-option-label::before {
-  content: '';
-  position: relative;
-  display: block;
-  width: 20px;
-  height: 20px;
-  margin-right: 16px;
-  background-color: #fff;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.filter-option-input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-.filter-option-input[type="radio"] + .filter-option-content .filter-option-label::before {
+.filter-option-input[type="radio"] + .filter-option-content .filter-option-btn {
   border-radius: 100%;
 }
 
-.filter-option-input[type="checkbox"]:checked + .filter-option-content .filter-option-label::after {
+.filter-option-input[type="checkbox"]:checked + .filter-option-content .filter-option-btn::before {
   content: '';
   position: absolute;
-  top: initial;
+  top: 5px;
   left: 4px;
   display: block;
   width: 12px;
@@ -680,10 +704,10 @@ input::-webkit-inner-spin-button {
   background-size: contain;
 }
 
-.filter-option-input[type="radio"]:checked + .filter-option-content .filter-option-label::after {
+.filter-option-input[type="radio"]:checked + .filter-option-content .filter-option-btn::before {
   content: '';
   position: absolute;
-  top: initial;
+  top: 5px;
   left: 5px;
   display: block;
   width: 10px;
@@ -692,15 +716,9 @@ input::-webkit-inner-spin-button {
   border-radius: 100%;
 }
 
-.filter-option-input[type="checkbox"]:focus + .filter-option-content .filter-option-label::before,
-.filter-option-input[type="radio"]:focus + .filter-option-content .filter-option-label::before {
+.filter-option-input[type="checkbox"]:focus + .filter-option-content .filter-option-btn,
+.filter-option-input[type="radio"]:focus + .filter-option-content .filter-option-btn {
   box-shadow: var(--border-shadow-3);
-}
-
-.filter-group-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 70px;
 }
 
 .price-input-container {
@@ -715,7 +733,7 @@ input::-webkit-inner-spin-button {
 }
 
 .price-field-input {
-  width: 123px;
+  width: 143px;
   height: 48px;
   padding-left: 20px;
   background-color: #f2f2f2;
@@ -753,6 +771,7 @@ input::-webkit-inner-spin-button {
 .filter-controls {
   display: flex;
   flex-direction: column;
+  padding-top: 56px;
 }
 
 .filter-controls .button {
@@ -933,7 +952,6 @@ input::-webkit-inner-spin-button {
   display: flex;
   flex-direction: column;
   row-gap: 16px;
-  box-sizing: border-box;
 }
 
 .card-photo {
@@ -1296,7 +1314,6 @@ input::-webkit-inner-spin-button {
   background-color: #f2f2f2;
   border-radius: 4px;
   padding: 0 20px 0 20px;
-  box-sizing: border-box;
 }
 
 .arrival input:hover,
