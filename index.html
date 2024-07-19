@@ -5,14 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Седона — небольшой городок в Аризоне, заслуживающий большего!</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-    <link rel="manifest" href="favicons/site.webmanifest">
-    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-
+    <link rel="icon" href="favicon.ico" sizes="32x32">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
 
@@ -144,7 +137,7 @@
             <h2 class="heading-2">Заинтересовались?</h2>
             <p class="subheading-2">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц
               в Седоне</p>
-            <a class="button modal-btn bflex-rown-btn" href="#popup">Поиск гостиницы в Седоне</a>
+            <button class="button modal-btn" type="button">Поиск гостиницы в Седоне</button>
           </div>
         </section>
         <section class="subscribe-section subscribe-bg" data-test="subscribe">
@@ -249,7 +242,9 @@
       </footer>
     </div>
 
-    <div id="popup" class="overlay">
+
+    <!------------------------------------------------------------
+		<div id="popup" class="overlay">
       <div class="popup">
         <h2 class="popup-title heading-2">Поиск гостиницы в Седоне</h2>
         <a class="close" href="#"><img src="icons/cross.svg" width="20" height="20" alt="Закрыть модальное окно"></a>
@@ -344,6 +339,7 @@
         input.value = newValue < min ? min : newValue;
       }
     </script>
+		------------------------------------------------------------>
 
   </body>
 
