@@ -189,7 +189,6 @@ input::-webkit-inner-spin-button {
 
 .subheading-2 {
   margin: 0;
-  padding: 0 35px;
   font-size: 22px;
   line-height: 26px;
   color: #333;
@@ -969,9 +968,14 @@ input::-webkit-inner-spin-button {
 }
 
 .card-price-row span {
-  display: inline-block;
+  display: block;
+	width: 50%;
   font-size: 18px;
   line-height: 21px;
+}
+
+.card-price-row span:last-child {
+	text-align: right;
 }
 
 .card-bottom {
