@@ -99,7 +99,9 @@ textarea {
 }
 
 input:focus,
-textarea:focus {
+textarea:focus,
+button:focus,
+a:focus {
   outline: none;
 }
 
@@ -778,22 +780,31 @@ input::-webkit-inner-spin-button {
   line-height: 20px;
 }
 
-.filter-controls .button[type="submit"] {
+.filter-submit-button {
   color: var(--color-button-small);
   background-color: var(--bg-button-second);
 }
 
-.filter-controls .button[type="submit"]:hover,
-.filter-controls .button[type="submit"]:focus {
+.filter-submit-button:hover,
+.filter-submit-button:focus {
   background-color: var(--bg-button-second-hover);
 }
 
-.filter-controls .button[type="submit"]:active {
+.filter-submit-button:active {
   color: var(--color-button-second-active);
 }
 
-.filter-controls .button:last-child {
+.filter-reset-button {
   margin: 0;
+}
+
+.filter-reset-button:hover,
+.filter-reset-button:active {
+	color: var(--color-button-second-active);
+}
+
+.filter-reset-button:focus {
+  box-shadow: var(--border-shadow-3);
 }
 
 .catalog-list-section {
