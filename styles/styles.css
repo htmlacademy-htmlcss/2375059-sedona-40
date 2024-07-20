@@ -248,10 +248,6 @@ input::-webkit-inner-spin-button {
   color: #000;
 }
 
-.menu-item.active {
-  pointer-events: none;
-}
-
 .menu-item.active .menu-link::after {
   content: '';
   position: absolute;
