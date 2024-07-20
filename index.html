@@ -137,7 +137,8 @@
             <h2 class="heading-2">Заинтересовались?</h2>
             <p class="subheading-2">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц
               в Седоне</p>
-            <button class="button modal-btn modal-btn-big" type="button">Поиск гостиницы в Седоне</button>
+            <button id="popup-btn" class="button modal-btn modal-btn-big" type="button">Поиск гостиницы в
+              Седоне</button>
           </div>
         </section>
         <section class="subscribe-section subscribe-bg" data-test="subscribe">
@@ -241,6 +242,114 @@
         </div>
       </footer>
     </div>
+
+    <div id="popup-overlay">
+      <div class="popup">
+        <h2 class="popup-title heading-2">Поиск гостиницы в Седоне</h2>
+        <button id="popup-close" type="button"><img src="icons/cross.svg" width="20" height="20"
+            alt="Закрыть модальное окно"></button>
+        <div class="popup-content">
+          <form class="booking-form" action="https://echo.htmlacademy.ru/" method="post">
+            <ul class="list booking-list">
+              <li class="arrival booking-item">
+                <label class="form-label" for="arrival">Дата заезда:</label>
+                <div class="input-wrap">
+                  <input type="text" id="arrival" name="arrival" placeholder="27 апреля 2020">
+                </div>
+              </li>
+              <li class="departure booking-item">
+                <label class="form-label" for="departure">Дата выезда:</label>
+                <div class="input-wrap">
+                  <input type="text" id="departure" name="departure" placeholder="1 сентября 2023">
+                </div>
+              </li>
+              <li class="adults booking-item">
+                <label class="form-label" for="adults">Взрослые:</label>
+                <div class="counter">
+                  <button class="counter-btn counter-minus" type="button"
+                    onclick="handleChangeCount('adults', 'minus')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="2" viewBox="0 0 14 2"
+                      fill="currentColor">
+                      <path d="M0 0L0 2L14 2V0L0 0Z" fill="currentColor" />
+                    </svg>
+                  </button>
+                  <input class="counter-input" type="number" id="adults" name="adults" value="2" min="1">
+                  <button class="counter-btn counter-plus" type="button" onclick="handleChangeCount('adults', 'plus')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                      fill="currentColor">
+                      <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" fill="currentColor" />
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <li class="children booking-item">
+                <label class="form-label" for="children">Дети:</label>
+                <span class="info">
+                  <button class="info-button" type="button" aria-labelledby="tooltip-text">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="2" height="12" viewBox="0 0 2 12"
+                      fill="currentColor">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z"
+                        fill="currentColor" />
+                    </svg>
+                  </button>
+                  <span class="info-text" id="tooltip-text">Укажите количество детей, которые будут с вами, возраст
+                    которых от 6 до 18
+                    лет. Дети до 6 лет размещаются бесплатно.</span>
+                </span>
+                <div class="counter">
+                  <button class="counter-btn counter-minus" type="button"
+                    onclick="handleChangeCount('children', 'minus')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="2" viewBox="0 0 14 2"
+                      fill="currentColor">
+                      <path d="M0 0L0 2L14 2V0L0 0Z" fill="currentColor" />
+                    </svg>
+                  </button>
+                  <input class="counter-input" type="number" id="children" name="children" value="2" min="0">
+                  <button class="counter-btn counter-plus" type="button"
+                    onclick="handleChangeCount('children', 'minus')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                      fill="currentColor">
+                      <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" fill="currentColor" />
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <li class="submit-item booking-item">
+                <button class="button booking-submit" type="submit">Найти</button>
+              </li>
+            </ul>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const handleChangeCount = (inputId, action) => {
+        const input = document.getElementById(inputId);
+        const min = Number(input.min);
+        const diff = action === 'minus' ? -1 : 1;
+        const newValue = Number(input.value) + diff;
+        input.value = newValue < min ? min : newValue;
+      }
+
+      const popup = document.getElementById('popup-overlay');
+      const popupBtn = document.getElementById('popup-btn');
+      const popupClose = document.getElementById('popup-close');
+
+      popupBtn.onclick = function () {
+        popup.style.display = "flex";
+      }
+
+      popupClose.onclick = function () {
+        popup.style.display = "none";
+      }
+
+      window.onclick = function (event) {
+        if (event.target == popup) {
+          popup.style.display = "none";
+        }
+      }
+    </script>
 
   </body>
 
