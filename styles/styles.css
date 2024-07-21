@@ -101,8 +101,7 @@ textarea {
 
 input:focus,
 textarea:focus,
-button:focus,
-a:focus {
+button:focus {
   outline: none;
 }
 
@@ -282,8 +281,8 @@ input::-webkit-inner-spin-button {
 
 .favorite-counter {
   position: absolute;
-  top: -11px;
-  right: -11px;
+  top: -10px;
+  right: -8px;
   display: block;
   width: 20px;
   height: 20px;
@@ -383,6 +382,7 @@ input::-webkit-inner-spin-button {
 
 .benefit-content h3 {
   position: relative;
+	max-width: 172px;
   margin: 0;
 }
 
@@ -395,7 +395,7 @@ input::-webkit-inner-spin-button {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.benefit-wide .benefit-content h3::after {
+.benefit-wide h3::after {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -508,7 +508,7 @@ input::-webkit-inner-spin-button {
 }
 
 .subscribe p {
-  margin: 0 0 54px;
+  margin: 0 100px 54px 100px;
 }
 
 .subscribe-form {
@@ -548,7 +548,7 @@ input::-webkit-inner-spin-button {
 
 /* catalog */
 .filter-section {
-  padding: 35px 70px 70px 70px;
+  padding: 35px 70px 39px 70px;
   color: #fff;
   background-image: url(../images/catalog-bg.jpg);
   background-repeat: no-repeat;
@@ -637,6 +637,7 @@ input::-webkit-inner-spin-button {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
+	text-transform: capitalize;
 }
 
 .filter-item {
@@ -730,7 +731,7 @@ input::-webkit-inner-spin-button {
 .price-field-input {
   width: 143px;
   height: 48px;
-  padding-left: 20px;
+  padding-left: 16px;
   background-color: #f2f2f2;
   font-size: 18px;
   line-height: 24px;
@@ -894,7 +895,7 @@ input::-webkit-inner-spin-button {
 .select-control {
   width: 292px;
   height: 47px;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 21px;
   padding: 0 20px;
   border: 2px solid #e5e5e5;
@@ -998,6 +999,7 @@ input::-webkit-inner-spin-button {
   line-height: 20px;
   color: var(--color-button-small);
   background-color: var(--bg-button-basic);
+	outline: 0;
 }
 
 .more-btn:hover,
@@ -1098,13 +1100,18 @@ input::-webkit-inner-spin-button {
 
 /* footer */
 .page-footer {
-  padding: 40px 70px 30px 70px;
+  padding: 46px 70px 30px 70px;
   align-items: center;
+	justify-content: space-between;
 }
 
-.page-footer > div {
-  max-width: 33.33333%;
-  flex-basis: 33.33333%;
+.footer-socials,
+.footer-copyright {
+	max-width: 170px;
+}
+
+.footer-contacts {
+	max-width: 720px;
 }
 
 .social-list {
@@ -1169,7 +1176,7 @@ input::-webkit-inner-spin-button {
 
 
 /* popup */
-#popup-overlay {
+.popup-overlay {
 	display: none;
   position: fixed;
   top: 0;
@@ -1193,7 +1200,7 @@ input::-webkit-inner-spin-button {
   margin: 0 0 64px;
 }
 
-#popup-close {
+.popup-close-btn {
   position: absolute;
   width: 52px;
   height: 52px;
@@ -1209,15 +1216,15 @@ input::-webkit-inner-spin-button {
 	outline: 0;
 }
 
-#popup-close:hover {
+.popup-close-btn:hover {
   background-color: #e6e6e6;
 }
 
-#popup-close:focus {
+.popup-close-btn:focus {
   box-shadow: var(--border-shadow-3);
 }
 
-#popup-close:active img {
+.popup-close-btn:active img {
   opacity: 0.3;
 }
 
@@ -1328,11 +1335,6 @@ input::-webkit-inner-spin-button {
 .arrival input:hover,
 .departure input:hover {
   background-color: #e6e6e6;
-}
-
-.arrival input::placeholder,
-.departure input::placeholder {
-  color: #000;
 }
 
 .arrival input:focus,
