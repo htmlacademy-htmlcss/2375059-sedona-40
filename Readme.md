@@ -1,7 +1,8 @@
 # Личный проект «Седона»
 
 * Студент: [Риат](https://up.htmlacademy.ru/htmlcss/40/user/2375059).
-* Наставник: `Неизвестно`.
+* Наставник: [Николай Колганов](https://htmlacademy.ru/profile/id794007).
+* Проект: [Седона](https://rantbc.github.io/2375059-sedona-40/).
 
 ---
 
