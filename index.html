@@ -36,7 +36,10 @@
               <li class="control-item">
                 <a class="link control-link search-btn" href="#">
                   <span class="control-icon search-icon">
-                    <img src="icons/search.svg" width="20" height="20" alt="Поиск">
+										<span class="visually-hidden">Поиск</span>
+										<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+										<path d="M19.5 18.0083L15.8 14.3287C16.8 13.0359 17.5 11.3453 17.5 9.4558C17.5 5.08011 13.9 1.5 9.5 1.5C5.1 1.5 1.5 5.17956 1.5 9.55525C1.5 13.9309 5.1 17.511 9.5 17.511C11.3 17.511 13 16.9144 14.4 15.8204L18.1 19.5L19.5 18.0083ZM9.5 15.5221C6.2 15.5221 3.5 12.837 3.5 9.55525C3.5 6.27348 6.2 3.5884 9.5 3.5884C12.8 3.5884 15.5 6.27348 15.5 9.55525C15.5 12.837 12.8 15.5221 9.5 15.5221Z" />
+										</svg>
                   </span>
                   <span class="visually-hidden">Поиск</span>
                 </a>
@@ -44,7 +47,10 @@
               <li class="control-item">
                 <a class="link control-link favorite-btn" href="#">
                   <span class="control-icon favorite-icon">
-                    <img src="icons/heart.svg" width="20" height="20" alt="Избранное">
+										<span class="visually-hidden">Избранное</span>
+										<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+										<path d="M9.9 19C9.6 19 9.3 18.9 9.1 18.6C3.7 12.5 2.4 11.1 2.1 10.7C1.4 9.8 1 8.6 1 7.4C1 4.4 3.4 2 6.5 2C7.8 2 9 2.5 10 3.3C11 2.5 12.3 2 13.5 2C16.5 2 19 4.4 19 7.4C19 8.7 18.5 9.9 17.7 10.8L10.7 18.7C10.5 18.9 10.3 19 9.9 19ZM3.9 9.5C4.2 9.9 7.4 13.5 10 16.4L16.2 9.4C16.7 8.9 16.9 8.2 16.9 7.4C16.9 5.6 15.4 4.1 13.6 4.1C12.6 4.1 11.6 4.6 10.9 5.4C10.6 5.7 10.3 5.8 10 5.8C9.7 5.8 9.4 5.6 9.2 5.4C8.5 4.6 7.5 4.1 6.5 4.1C4.7 4.1 3.2 5.6 3.2 7.4C3.1 8.3 3.5 9 3.9 9.5C3.8 9.5 3.8 9.5 3.9 9.5Z" />
+										</svg>
                     <span class="favorite-counter">12</span>
                   </span>
                   <span class="visually-hidden">Избранное</span>
@@ -57,9 +63,9 @@
       </header>
       <main class="index-content" data-test="main">
         <section class="hero-banner-section" data-test="hero">
-          <h1 class="visually-hidden">Седона</h1>
+          <h1 class="visually-hidden">Седона</h1>		
           <div class="hero-banner-img">
-            <img src="images/hero-banner.png" width="1200" height="485" alt="Широкий баннер на главной странице">
+						<span class="visually-hidden">Широкий баннер на главной странице</span>
           </div>
         </section>
         <section class="benefits-section" data-test="advantages">
@@ -146,6 +152,7 @@
             <h2 class="heading-2">Подпишитесь на рассылку</h2>
             <p class="subheading-2">Только полезная информация и никакого спама, честное бойскаутское!</p>
             <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+							<label class="visually-hidden" for="subscribe-email">Ваш e-mail</label>
               <input class="input-field subscribe-input" placeholder="Ваш e-mail" type="email" name="subscribe-email"
                 required>
               <button class="button subscribe-button" type="submit">Подписаться</button>
@@ -238,13 +245,13 @@
               <li class="arrival booking-item">
                 <label class="label form-label" for="arrival">Дата заезда:</label>
                 <div class="input-wrap">
-                  <input class="input-field" type="text" id="arrival" name="arrival" value="27 апреля 2020">
+                  <input class="input-field" type="text" id="arrival" name="arrival" value="27 апреля 2020" required>
                 </div>
               </li>
               <li class="departure booking-item">
                 <label class="label form-label" for="departure">Дата выезда:</label>
                 <div class="input-wrap">
-                  <input class="input-field" type="text" id="departure" name="departure" value="1 сентября 2023">
+                  <input class="input-field" type="text" id="departure" name="departure" value="1 сентября 2023" required>
                 </div>
               </li>
               <li class="adults booking-item">
