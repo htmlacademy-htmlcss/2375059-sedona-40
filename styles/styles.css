@@ -119,6 +119,7 @@ body {
   white-space: normal;
   background: none;
   line-height: 1;
+	appearance: textfield;
 }
 
 .input-field:focus,
@@ -248,6 +249,15 @@ body {
   color: #000;
 }
 
+.menu-link:hover,
+.menu-link:focus {
+	color: #756157;
+}
+
+.menu-link:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
 .menu-item.active .menu-link::after {
   content: '';
   position: absolute;
@@ -278,11 +288,21 @@ body {
 }
 
 .control-icon {
+  display: block;
   position: relative;
 }
 
-.control-icon img {
+.control-icon svg {
   display: block;
+}
+
+.control-link:hover svg,
+.control-link:focus svg {
+  fill: #756157;
+}
+
+.control-link:active svg {
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 .favorite-counter {
@@ -328,8 +348,13 @@ body {
   position: relative;
 }
 
-.hero-banner-img img {
-  display: block;
+.hero-banner-img {
+	width: 100%;
+	height: 485px;
+  background-image: url(../images/hero-banner.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+	background-color: var(--bg-button-second);
 }
 
 .hero-banner-section::after {
@@ -374,7 +399,7 @@ body {
 .benefit-wide,
 .benefit-wide p {
   color: #fff;
-  background-color: #82b3d3;
+	background-color: var(--bg-button-second);
 }
 
 .benefit-content {
@@ -506,6 +531,7 @@ body {
   background-image: url(../images/subscribe-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+	background-color: var(--bg-button-second);
 }
 
 .subscribe-section.subscribe-bg,
@@ -568,6 +594,7 @@ body {
   background-image: url(../images/catalog-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+	background-color: var(--bg-button-second);
 }
 
 .filter-section h1 {
@@ -1215,7 +1242,7 @@ body {
 }
 
 .copyright:active svg {
-  color: rgba(117, 97, 87, 0.3);
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 
