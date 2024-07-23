@@ -143,6 +143,7 @@ body {
   border-radius: 4px;
   font: inherit;
   font-weight: 700;
+	text-align: center;
   text-transform: uppercase;
   color: inherit;
   background-color: transparent;
@@ -773,7 +774,7 @@ body {
 .price-field-input {
   width: 143px;
   height: 48px;
-  padding-left: 16px;
+  padding: 0 40px 0 16px;
   background-color: #f2f2f2;
   font-size: 18px;
   line-height: 24px;
@@ -911,11 +912,13 @@ body {
 }
 
 .catalog-tools h2 {
+	max-width: 338px;
   margin: 0 auto 0 0;
 }
 
 .catalog-sort {
   position: relative;
+	max-width: 292px;
   margin: 0 70px 0 0;
 }
 
@@ -950,17 +953,14 @@ body {
   border-color: var(--bg-button-second-hover);
 }
 
+.catalog-switcher {
+	max-width: 160px;
+}
+
 .switcher {
   display: flex;
   flex-wrap: wrap;
-}
-
-.switcher-item {
-  margin: 0 0 0 8px;
-}
-
-.switcher-item:first-child {
-  margin: 0;
+	gap: 8px;
 }
 
 .mode-btn {
@@ -1039,9 +1039,12 @@ body {
 .card-bottom {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  grid-auto-rows: 36px;
   gap: 16px 20px;
   margin-top: auto;
+}
+
+.card-bottom .button {
+	padding: 8px;
 }
 
 .more-btn {
@@ -1106,9 +1109,8 @@ body {
 }
 
 .rating-count {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+	padding: 8px;
+  text-align: center;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
